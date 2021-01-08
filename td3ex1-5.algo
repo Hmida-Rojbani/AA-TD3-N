@@ -1,0 +1,11 @@
+FUNCTION Dégénéré(A : AB) : BOOLEAN
+
+BEGIN
+    IF (A = NIL) THEN
+        RETURN TRUE
+    ELSE_IF (A^.fg <> NIL AND A^.fd <> NIL) THEN
+        RETURN FALSE
+    ELSE
+        RETURN Dégénéré(A^.fg) AND Dégénéré(A^.fd)
+    END_IF
+END
