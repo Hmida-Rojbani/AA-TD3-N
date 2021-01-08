@@ -1,0 +1,8 @@
+FUNCTION hauteur(A :AB) : INTEGER
+BEGIN
+    IF (A = NIL ) THEN
+        RETURN 0
+    ELSE
+        RETURN 1 + max(hauteur(A^.fg), hauter(A^.fd))
+    END_IF
+END
