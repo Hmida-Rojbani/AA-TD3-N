@@ -1,0 +1,5 @@
+FUNCTION feuille(A:AB) : BOOLEAN
+BEGIN
+    
+    RETURN A^.fg = NIL AND A^.fd = NIL ;
+END
