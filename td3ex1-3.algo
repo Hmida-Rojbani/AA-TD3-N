@@ -1,0 +1,10 @@
+FUNCTION nbFeuille(A : AB) : INTEGER
+BEGIN
+    IF (A = NIL) THEN
+        RETURN 0
+    ELSE_IF (feuille(A)) THEN
+        RETURN 1
+    ELSE
+        RETURN nbFeuille(A^.fg) + nbFeuille(A^.fd)
+    END_IF
+END
