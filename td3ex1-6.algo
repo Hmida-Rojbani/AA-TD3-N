@@ -1,0 +1,12 @@
+PROCEDURE Exchange(A: AB)
+VAR
+    aux : AB
+BEGIN
+    IF (A <> NIL) THEN
+        Exchange(A^.fg)
+        Exchange(A^.fd)
+        aux := A^.fg
+        A^.fg := A^.fd
+        A^.fd := aux
+    END_IF
+END
