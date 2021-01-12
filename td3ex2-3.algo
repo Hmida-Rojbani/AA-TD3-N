@@ -1,6 +1,7 @@
 PROCEDURE Construire(VAR A : ABR, list : LS)
-VAR
-    set_declarations
 BEGIN
-    set_instructions
+    IF (list <> NIL) THEN
+        inserer(A, list^.val)
+        Construire(A, list^.next)
+    END_IF
 END
