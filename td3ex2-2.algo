@@ -1,0 +1,35 @@
+PROCEDURE inserer(VAR A : ABR, x : INTEGER) // iterative d'inserer x dans ABR
+VAR
+    p : ABR
+    pere : ABR
+BEGIN
+    IF (A = NIL) THEN
+        A := creer_noeud()
+        A^.val := x
+        A^.fg := NIL
+        A^.fd := NIL
+    ELSE 
+        p := A
+        WHILE (p <> NIL) DO
+            pere := p
+            IF (x <= p^.val) THEN
+                p := p^.fg
+            ELSE
+                p := p^.fd
+            END_IF
+        END_WHILE
+
+        p := creer_noeud()
+        p^.val := x
+        p^.fg := NIL
+        p^.fd := NIL
+        IF (x <= pere^.val) THEN
+                pere^.fg := p
+            ELSE
+                pere^.fd := p
+        END_IF
+    END_IF
+END
+
+
+     
