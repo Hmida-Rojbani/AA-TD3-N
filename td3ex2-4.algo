@@ -1,0 +1,16 @@
+FUNCTION Recherche_occ(A: ABR, x : INTEGER, n : INTEGER) : ABR
+
+BEGIN
+    IF (A = NIL) THEN
+        RETURN NIL
+    ELSE_IF (A^.val = x) THEN
+        IF (n-1 = 0) THEN
+            RETURN A
+        ELSE
+            Recherche_occ(A^.fg, n-1)
+        END_IF   
+    ELSE
+        Recherche_occ(A^.fg, n)
+        Recherche_occ(A^.fd, n)
+    END_IF
+END
