@@ -1,0 +1,15 @@
+PROCEDURE Affiche_arbre(A :ABR)
+
+BEGIN
+    IF (A <> NIL) THEN
+        afficher('(' ) 
+        Affiche_arbre(A^.fg)
+        afficher(',' )
+        afficher(A^.val)
+        afficher(',' )
+        Affiche_arbre(A^.fd)
+        afficher(')')
+    ELSE 
+        afficher('_')
+    END_IF
+END
