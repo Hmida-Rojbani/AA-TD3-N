@@ -1,0 +1,6 @@
+PROCEDURE Construire(VAR A : ABR, list : LS)
+VAR
+    set_declarations
+BEGIN
+    set_instructions
+END
