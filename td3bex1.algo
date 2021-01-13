@@ -1,0 +1,8 @@
+FUNCTION plus_petit(A :ABR) : INTEGER
+BEGIN
+   IF (A^.fg = NIL) THEN
+       RETURN A^.val
+    ELSE 
+        plus_petit(A^.fg)
+   END_IF
+END
