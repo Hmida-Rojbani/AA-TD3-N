@@ -1,0 +1,12 @@
+FUNCTION Compter_noeuds_Inf(A : ABR, k : INTEGER ) : INTEGER
+BEGIN
+    IF (A = NIL) THEN
+        RETURN 0
+    ELSE 
+        IF (A^.val >= k) THEN
+            RETURN Compter_noeuds_Inf(A^.fg)
+        ELSE
+            RETURN 1 + Compter_noeuds_Inf(A^.fg) + Compter_noeuds_Inf(A^.fd)
+        END_IF
+    END_IF
+END
